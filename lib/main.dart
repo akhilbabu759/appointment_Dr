@@ -1,12 +1,9 @@
 import 'package:drbook/screen/appointment/view/appointment.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/services.dart';
 import 'package:get/get.dart';
+
 void main() {
- SystemChrome.setPreferredOrientations([DeviceOrientation.portraitUp])
-   .then((_) {
   runApp(const MyApp());
- });
 }
 class MyApp extends StatelessWidget {
   const MyApp({super.key});
