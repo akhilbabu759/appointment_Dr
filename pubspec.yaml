@@ -68,6 +68,9 @@ flutter:
     - assets/image/message.svg
     - assets/image/people.svg
     - assets/image/star-1.svg
+    - assets/image/call.svg
+    - assets/image/person.svg
+    - assets/image/video.svg
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware
 

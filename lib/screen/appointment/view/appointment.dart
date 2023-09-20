@@ -1,10 +1,12 @@
 import 'package:drbook/screen/appointment/view/widget/status_repeat.dart';
+import 'package:drbook/screen/select_package/view/select-package.dart';
 import 'package:drbook/style/app_color.dart';
 import 'package:drbook/style/common_widget.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
 import 'widget/appbar.dart';
+import 'widget/bottom_widget.dart';
 import 'widget/listview.dart';
 import 'widget/profile_card.dart';
 
@@ -79,38 +81,7 @@ class Appointment extends StatelessWidget {
           CListview(
             tile: 'Time',
           ),
-          Expanded(
-            child: Column(
-              mainAxisAlignment: MainAxisAlignment.end,
-              children: [
-                Container(
-                  child: Center(
-                      child: Container(
-                    child: Center(
-                        child: Text(
-                      'Make Appointment',
-                      style: TextStyle(color: Colors.white, fontSize: 15),
-                    )),
-                    width: Get.width * 0.85,
-                    height: Get.height * 0.06,
-                    decoration: BoxDecoration(
-                        color: AppColors().bluCle,
-                        borderRadius: BorderRadius.all(Radius.circular(30))),
-                  )),
-                  height: Get.height * 0.1,
-                  decoration: BoxDecoration(
-                      // color: Colors.amber,
-                      borderRadius: BorderRadius.only(
-                        topLeft: Radius.circular(20),
-                        topRight: Radius.circular(20),
-                      ),
-                      border: Border.all(
-                          color: Color.fromARGB(255, 202, 202, 202),
-                          width: 1.4)),
-                ),
-              ],
-            ),
-          )
+          BottomWidget(tex: 'Make Appointment',)
         ],
       ),
     );
