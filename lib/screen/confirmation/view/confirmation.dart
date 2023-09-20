@@ -1,4 +1,6 @@
+import 'package:drbook/screen/appointment/view/appointment.dart';
 import 'package:drbook/screen/appointment/view/widget/appbar.dart';
+import 'package:drbook/screen/my_bookings/view/my_booking.dart';
 import 'package:drbook/style/app_color.dart';
 import 'package:drbook/style/common_widget.dart';
 import 'package:flutter/material.dart';
@@ -104,7 +106,8 @@ class Confirmation extends StatelessWidget {
                     ),
                     GestureDetector(
                       onTap: () {
-                        // Get.to(check==1? SelectPackage():check==2?Summery():Confirmation()) ;
+                        Get.to(MyBooking());
+                       
                       },
                       child: Container(
                         child: Center(
@@ -124,7 +127,9 @@ class Confirmation extends StatelessWidget {
                       height: Get.height * 0.023,
                     ),
                     TextButton(
-                        onPressed: () {},
+                        onPressed: () {
+                          Get.to(Appointment());
+                        },
                         child: Text(
                           'Book Another',
                           style: TextStyle(
