@@ -15,13 +15,17 @@ class AppBarC extends StatelessWidget {
       child: Row(
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: [
-          Container(
-              height: Get.size.height * 0.06,
-              width: Get.size.height * 0.06,
-              decoration: BoxDecoration(
-                  borderRadius: BorderRadius.all(Radius.circular(30)),
-                  border: Border.all(color: Colors.black12, width: 1.7)),
-              child: Icon(Icons.arrow_back)),
+          GestureDetector(onTap: () {
+            Get.back();
+          },
+            child: Container(
+                height: Get.size.height * 0.06,
+                width: Get.size.height * 0.06,
+                decoration: BoxDecoration(
+                    borderRadius: BorderRadius.all(Radius.circular(30)),
+                    border: Border.all(color: Colors.black12, width: 1.7)),
+                child: Icon(Icons.arrow_back)),
+          ),
           Text(
             tex,
             style: TextStyle(

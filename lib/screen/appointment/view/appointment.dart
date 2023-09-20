@@ -81,7 +81,7 @@ class Appointment extends StatelessWidget {
           CListview(
             tile: 'Time',
           ),
-          BottomWidget(tex: 'Make Appointment',)
+          BottomWidget(tex: 'Make Appointment',check: 1,)
         ],
       ),
     );

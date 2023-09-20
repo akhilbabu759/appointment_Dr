@@ -37,6 +37,7 @@ dependencies:
   cupertino_icons: ^1.0.2
   get: ^4.6.6
   flutter_svg: ^2.0.7
+  lottie: ^2.6.0
 
 dev_dependencies:
   flutter_test:
@@ -71,6 +72,9 @@ flutter:
     - assets/image/call.svg
     - assets/image/person.svg
     - assets/image/video.svg
+    - assets/lottie/animation_lmrxr53d.json
+    - assets/image/calender.svg
+    - assets/image/timer-1.svg
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware
 

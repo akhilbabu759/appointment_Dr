@@ -96,7 +96,7 @@ class SelectPackage extends StatelessWidget {
               
             ]),
           ),
-          BottomWidget(tex: 'Next')
+          BottomWidget(tex: 'Next',check: 2,)
         ],
       ),
     );

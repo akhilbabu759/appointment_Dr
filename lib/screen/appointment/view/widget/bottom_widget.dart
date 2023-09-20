@@ -1,13 +1,16 @@
 
+import 'package:drbook/screen/confirmation/view/confirmation.dart';
 import 'package:drbook/screen/select_package/view/select-package.dart';
+import 'package:drbook/screen/summery/view/summery.dart';
 import 'package:drbook/style/app_color.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
 class BottomWidget extends StatelessWidget {
+  final int check;
   final String tex;
   const BottomWidget({
-    super.key, required this.tex,
+    super.key, required this.tex, required this.check,
   });
 
   @override
@@ -19,7 +22,7 @@ class BottomWidget extends StatelessWidget {
           Container(
             child: Center(
                 child: GestureDetector(onTap: () {
-                  Get.to(SelectPackage());
+                  Get.to(check==1? SelectPackage():check==2?Summery():Confirmation()) ;
                 },
                   child: Container(
                                     child: Center(
