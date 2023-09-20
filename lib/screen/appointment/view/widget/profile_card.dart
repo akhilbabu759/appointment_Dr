@@ -1,5 +1,6 @@
 import 'package:drbook/style/app_color.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_svg/flutter_svg.dart';
 import 'package:get/get.dart';
 
 class ProfileCard extends StatelessWidget {
@@ -32,13 +33,13 @@ class ProfileCard extends StatelessWidget {
         ),
         Padding(
           padding: const EdgeInsets.all(10.0),
-          child: Column(crossAxisAlignment: CrossAxisAlignment.start,
+          child: Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               Text(
                 'Dr. Jonny Wilson',
                 style: TextStyle(
-                    fontSize: Get.width * 0.06,
-                    fontWeight: FontWeight.w400),
+                    fontSize: Get.width * 0.06, fontWeight: FontWeight.w400),
               ),
               Text(
                 'Dentist',
@@ -46,21 +47,31 @@ class ProfileCard extends StatelessWidget {
                     color: AppColors().grCle,
                     fontSize: 15,
                     fontWeight: FontWeight.w400),
-              ),SizedBox(height: 14,),
+              ),
+              SizedBox(
+                height: 14,
+              ),
               Row(
                 children: [
-                  Icon(
-                    Icons.location_pin,color: AppColors().bluCle,
-                    size: 16,
+                  SvgPicture.asset(
+                    'assets/image/location.svg',
+                    colorFilter: ColorFilter.mode(AppColors().bluCle,
+                        BlendMode.srcIn), // Replace with your SVG file path
+                    //  color: AppColors().bluCle, // Change this to your desired color
+                    // width: 16, // Set the width as needed
+                    height: 20, // Set the height as needed
                   ),
-                  Text('NEW York, United STAts',style: TextStyle(
-                    color: AppColors().grCle,
-                    fontSize: 15,
-                    fontWeight: FontWeight.w400)),
-                  Icon(
-                    Icons.map_outlined,
-                    color: AppColors().bluCle,size: 16,
-                  )
+                  Text('NEW York, United STAts ',
+                      style: TextStyle(
+                          color: AppColors().grCle,
+                          fontSize: 15,
+                          fontWeight: FontWeight.w400)),
+                  SvgPicture.asset(
+                    'assets/image/map.svg',
+                    colorFilter:
+                        ColorFilter.mode(AppColors().bluCle, BlendMode.srcIn),
+                    height: 20,
+                  ),
                 ],
               )
             ],
