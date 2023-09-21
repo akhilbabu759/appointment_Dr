@@ -5,7 +5,6 @@ import 'package:drbook/screen/select_package/view/widget/package_list.dart';
 import 'package:drbook/style/app_color.dart';
 import 'package:drbook/style/common_widget.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_svg/svg.dart';
 import 'package:get/get.dart';
 
 class SelectPackage extends StatelessWidget {
@@ -15,10 +14,10 @@ class SelectPackage extends StatelessWidget {
   Widget build(BuildContext context) {
     final contro=Get.put(packageController());
     contro.getDataFromApi();
-    String _selectedItem = 'Option 1'; // Initially selected item
+    // String _selectedItem = 'Option 1'; // Initially selected item
 
     // List of items for the dropdown
-    List<String> _items = ['Option 1', 'Option 2', 'Option 3', 'Option 4'];
+    // List<String> _items = ['Option 1', 'Option 2', 'Option 3', 'Option 4'];
 
     return Scaffold(
       body: GetBuilder<packageController>(builder: (controller) {

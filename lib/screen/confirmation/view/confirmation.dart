@@ -14,7 +14,7 @@ class Confirmation extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    const String lottieAssetPath = 'assets/lottie/animation_lmrxr53d.json';
+    // const String lottieAssetPath = 'assets/lottie/animation_lmrxr53d.json';
     final contro = Get.put(ConfirmationController());
     contro.getApiValue();
 

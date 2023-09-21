@@ -1,6 +1,6 @@
 import 'package:drbook/screen/appointment/view/widget/appbar.dart';
 import 'package:drbook/screen/my_bookings/controller/all_controller.dart';
-import 'package:drbook/style/app_color.dart';
+
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 

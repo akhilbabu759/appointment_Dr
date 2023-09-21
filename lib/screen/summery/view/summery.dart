@@ -4,7 +4,7 @@ import 'package:drbook/screen/appointment/view/widget/bottom_widget.dart';
 import 'package:drbook/screen/appointment/view/widget/profile_card.dart';
 import 'package:drbook/screen/select_package/controller/package_controller.dart';
 import 'package:drbook/screen/summery/view/widget/summ_row.dart';
-import 'package:drbook/style/app_color.dart';
+
 import 'package:drbook/style/common_widget.dart';
 import 'package:flutter/material.dart';
 
