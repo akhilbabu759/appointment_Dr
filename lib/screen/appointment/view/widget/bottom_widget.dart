@@ -2,6 +2,7 @@ import 'dart:developer';
 
 import 'package:drbook/screen/appointment/controller/appointment_controller.dart';
 import 'package:drbook/screen/confirmation/view/confirmation.dart';
+import 'package:drbook/screen/select_package/controller/package_controller.dart';
 import 'package:drbook/screen/select_package/view/select-package.dart';
 import 'package:drbook/screen/summery/view/summery.dart';
 import 'package:drbook/style/app_color.dart';
@@ -20,6 +21,7 @@ class BottomWidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final contro = Get.put(AppointmentController());
+    final packgC=Get.put(packageController());
     return Expanded(
       child: Column(
         mainAxisAlignment: MainAxisAlignment.end,
@@ -33,7 +35,7 @@ class BottomWidget extends StatelessWidget {
                     ? Get.to(check == 1
                         ? SelectPackage()
                         : check == 2
-                            ? Summery()
+                            ? Summery(aController:contro,pController:packgC,)
                             : Confirmation())
                     : Get.snackbar(
                         'Checkout the time', 'Please select a time !!',

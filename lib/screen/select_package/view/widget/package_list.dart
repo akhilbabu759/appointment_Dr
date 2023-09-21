@@ -4,6 +4,7 @@ import 'package:flutter_svg/svg.dart';
 import 'package:get/get.dart';
 
 class PackageList extends StatelessWidget {
+  final String  radioGvalue;
   final String svg;
   final String title;
   final String subtile;
@@ -11,7 +12,7 @@ class PackageList extends StatelessWidget {
     super.key,
     required this.svg,
     required this.title,
-    required this.subtile,
+    required this.subtile, required this.radioGvalue,
   });
 
   @override
@@ -56,12 +57,12 @@ class PackageList extends StatelessWidget {
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
                       Text(
-                        'Messaging',
+                        title,
                         style: TextStyle(
                             fontSize: 20, fontWeight: FontWeight.w500),
                       ),
                       Text(
-                        'Chat with Doctor',
+                        subtile,
                         style: TextStyle(
                             color: AppColors().grCle,
                             fontWeight: FontWeight.w400),
@@ -73,8 +74,8 @@ class PackageList extends StatelessWidget {
               Transform.scale(
                 scale: 1.8,
                 child: Radio(
-                  value: '',
-                  groupValue: '',
+                  value: title,
+                  groupValue: radioGvalue,
                   onChanged: (value) {},
                 ),
               )

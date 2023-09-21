@@ -1,11 +1,13 @@
 
+import 'package:drbook/screen/my_bookings/model/all_booking_model.dart';
 import 'package:drbook/style/app_color.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
 class BookingCard extends StatelessWidget {
+  final AllBooking model;
   const BookingCard({
-    super.key,
+    super.key, required this.model,
   });
 
   @override
@@ -32,7 +34,7 @@ class BookingCard extends StatelessWidget {
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
                 Text(
-                  'Aug 25, 2023 - 10:00 AM',
+                  '${model.appointmentDate} - ${model.appointmentTime.substring(0,8)}',
                   style: TextStyle(
                       fontSize: 18, fontWeight: FontWeight.w500),
                 ),
@@ -64,7 +66,7 @@ class BookingCard extends StatelessWidget {
                     Column(
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
-                        Text('Dr. Jenny William'),
+                        Text(model.doctorName),
                         SizedBox(
                           height: 10,
                         ),
@@ -72,7 +74,7 @@ class BookingCard extends StatelessWidget {
                           children: [
                             Icon(Icons.location_pin),
                             Text(
-                              'G8502 Preston Rd. Inglewood',
+                              model.location,
                               style: TextStyle(fontSize: 12),
                             )
                           ],
@@ -88,7 +90,7 @@ class BookingCard extends StatelessWidget {
                               style: TextStyle(fontSize: 12),
                             ),
                             Text(
-                              '#DR452SA54',
+                              '#${model.bookingId}',
                               style: TextStyle(
                                   fontSize: 12,
                                   color: AppColors().bluCle),
