@@ -20,7 +20,7 @@ class Summery extends StatelessWidget {
               children: [
                 AppBarC(tex: 'Review Summary'),
                 
-                ProfileCard(),
+                ProfileCard(model: []),
                 CommonWidget().cSizedBox,
                   Divider(
                     thickness: 1.5,
